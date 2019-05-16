@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Class:    4A7B
+  Name:     Jordy van der Neut
+  Purpose:  JavaScript periode 04
+
+  dd-mm-yyyy  Description
+  ==========  ==========================================
+  18-05-2018  Initial
+-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link rel="stylesheet" href="css/periode_04.css">
+	
+	<script src="javascript/menu.js"></script> 
+	<script src="javascript/dobbelen.js"></script> 
+	 
+    <title>ROCMN programmeren P04</title>
+  </head> 
+  <script>
+    var moveCar = true;
+    function togglePlayAnimation() {
+	
+	  console.log("start togglePlayAnimation");
+	  
+	  moveCar = !moveCar;
+	  document.getElementById("carMove").style.animationPlayState = (moveCar?"running":"paused")
+	  
+	  console.log("end togglePlayAnimation");
+	}
+  </script>
+    <header>
+      <h1>Javascript periode 04</h1>
+    </header>
+
+    <!-- BOR_01 -->
+	<div class="newrow"> 
+	  
+ 	  <nav id="menu">
+        <button id="menu_01" onclick="toggleSubMenu();">Opdrachten P04</button>
+        <div id="submenu_01" >
+		  <button class="submenu" id="exercise_01" onclick="showExcercise(this.id);">Opdracht 02 Annimatie</button>
+        </div>
+	  </nav>
+	  
+     <div id="output_exercise_01">
+	 
+		<div onclick="togglePlayAnimation()" class="carContainer" id="carMove">
+		  <div class="newrow">
+		    <img class="car" src="img/car.png">
+			<div class= "wolk1">&nbsp;</div>
+			<div class= "wolk2">&nbsp;</div>
+			<div class= "wolk3">&nbsp;</div>
+		  </div>
+		</div>
+    </div> 
+	</div>
+	<div class="newrow"> 
+      <div id="result"></div>
+    </div> 
+  </body>
+</html>
